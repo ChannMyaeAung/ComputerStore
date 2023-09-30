@@ -1,31 +1,37 @@
 import React from "react";
-import { paymentIcons, socialMedia } from "../data";
-import { styles } from "../styles";
+import { styles } from "../../styles";
+import { paymentIcons, socialMedia } from "../../data";
+import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 
 /* Google Play and App Store */
-import appStoreSvg from "../assets/app_store.svg";
-import googleStoreSvg from "../assets/google_store.svg";
-
-const Footer = () => {
+import appStoreSvg from "../../assets/app_store.svg";
+import googleStoreSvg from "../../assets/google_store.svg";
+const FooterBottom = () => {
   return (
-    <footer
-      id="footer"
-      className={`${styles.paddingY} ${styles.paddingX} gap-6 fixed bottom-0 border shadow-xl w-full bg-[#fffdde]  flex flex-col items-center justify-center`}
+    <section
+      id="footer__bottom"
+      className={`${styles.paddingY} ${styles.paddingX} gap-6 border shadow-xl w-full bg-[#fff] flex flex-col items-center justify-center`}
     >
       <div
-        id="footer__socialMedia"
+        id="footer__bottom_socialMedia"
         className={`${styles.flexCenter} gap-2 mb-auto flex-wrap`}
       >
         {socialMedia.map((item) => (
-          <div
+          <NavLink
             key={item.id}
-            className="border-[3px] duration-200 hover:border-black hover:-translate-y-[5px] border-[#878787] rounded-full p-2"
+            to={item.path}
+            target="_blank"
+            className={`border-[#878787] border-2 duration-200 hover:-translate-y-2 hover:text-black hover:border-black p-2 rounded-full `}
           >
-            <NavLink to={item.path} target="_blank">
+            <IconContext.Provider
+              value={{
+                className: "hover:text-black text-[20px] text-[#878787]",
+              }}
+            >
               {item.icon}
-            </NavLink>
-          </div>
+            </IconContext.Provider>
+          </NavLink>
         ))}
       </div>
 
@@ -43,7 +49,7 @@ const Footer = () => {
 
       <div
         id="footer__apps"
-        className="flex flex-col items-center justify-center w-full md:flex-row"
+        className="flex flex-col items-center justify-center w-full sm:flex-row"
       >
         <NavLink
           to={`https://www.apple.com/app-store/`}
@@ -65,8 +71,8 @@ const Footer = () => {
       <p className="mt-auto text-center">
         Copyright© {new Date().getFullYear()} ChanComputerStore.com
       </p>
-    </footer>
+    </section>
   );
 };
 
-export default Footer;
+export default FooterBottom;
