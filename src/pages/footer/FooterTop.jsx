@@ -1,7 +1,7 @@
 import React from "react";
 import { styles } from "../../styles";
 import { Form, NavLink } from "react-router-dom";
-import coin from "../../assets/coins.png";
+import coin from "../../assets/footerImgs/coins.png";
 
 import {
   LiaLifeRing,
@@ -63,7 +63,7 @@ const FooterTop = () => {
             <React.Fragment key={link.id}>
               <NavLink
                 to={link.path}
-                className={`flex text-[14px] md:text-[16px] flex-1 justify-around gap-1 text-primaryGray`}
+                className={`flex text-[14px] md:text-[16px] flex-1 duration-200 hover:text-black justify-around gap-1 text-primaryGray`}
               >
                 {link.title}
                 {index !== FAQLinks.length - 1 && <span className="">|</span>}

@@ -5,8 +5,8 @@ import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 
 /* Google Play and App Store */
-import appStoreSvg from "../../assets/app_store.svg";
-import googleStoreSvg from "../../assets/google_store.svg";
+import appStoreSvg from "../../assets/footerImgs/app_store.svg";
+import googleStoreSvg from "../../assets/footerImgs/google_store.svg";
 const FooterBottom = () => {
   return (
     <section
@@ -15,14 +15,14 @@ const FooterBottom = () => {
     >
       <div
         id="footer__bottom_socialMedia"
-        className={`${styles.flexCenter} gap-2 mb-auto flex-wrap`}
+        className={`${styles.flexCenter}  gap-2 mb-auto flex-wrap`}
       >
         {socialMedia.map((item) => (
           <NavLink
             key={item.id}
             to={item.path}
             target="_blank"
-            className={`border-[#878787] border-2 duration-200 hover:-translate-y-2 hover:text-black hover:border-black p-2 rounded-full `}
+            className={`border-[#878787] p-2 border-2 duration-200 hover:-translate-y-2 hover:text-black hover:border-black rounded-full `}
           >
             <IconContext.Provider
               value={{

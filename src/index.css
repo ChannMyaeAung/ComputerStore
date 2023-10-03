@@ -79,3 +79,46 @@ body {
 .searchbar.open {
   transform: translateX(0);
 }
+
+/* Nav/Sidebar Items */
+.nav-items {
+  border: 1px solid gray;
+  padding: 1rem;
+  width: 100%;
+}
+
+.button_plus {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  transition: all 0.5s ease-in-out;
+}
+
+.button_plus:after {
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 0.5px;
+  width: 50%;
+  background: black;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.button_plus:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+  height: 50%;
+  width: 0.5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.button_plus.open::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+  opacity: 0;
+}

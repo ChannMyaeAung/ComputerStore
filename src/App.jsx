@@ -17,6 +17,7 @@ import Contact from "./pages/footer/footerpages/Contact";
 import Terms from "./pages/footer/footerpages/Terms";
 import Returns from "./pages/footer/footerpages/Returns";
 import Privacy from "./pages/footer/footerpages/Privacy";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const router = createBrowserRouter(
@@ -32,6 +33,9 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/returns" element={<Returns />} />
         <Route path="/privacy" element={<Privacy />} />
+
+        {/* Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
