@@ -1,6 +1,6 @@
 import React from "react";
 import { styles } from "../../styles";
-import { paymentIcons, socialMedia } from "../../data";
+import { paymentIcons, socialMedia } from "../../data/data";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 

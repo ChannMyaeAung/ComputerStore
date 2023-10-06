@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { sideBarEls } from "../../data";
+import { sideBarEls } from "../../data/data";
 import { NavLink } from "react-router-dom";
 import { styles } from "../../styles";
 import { LiaPlusSolid } from "react-icons/lia";
@@ -45,8 +45,8 @@ const Sidebar = ({ isNavOpen, setIsNavOpen }) => {
     return (
       <ul className={`mt-[5rem] w-full`}>
         {items.map((sidebarEl, index) => (
-          <>
-            <li key={sidebarEl.id}>
+          <Fragment key={sidebarEl.id}>
+            <li>
               {sidebarEl.path ? (
                 <NavLink
                   to={sidebarEl.path}
@@ -81,7 +81,7 @@ const Sidebar = ({ isNavOpen, setIsNavOpen }) => {
             {sidebarEl.children && openDropdownId === sidebarEl.id && (
               <Fragment>{renderSidebarChildren(sidebarEl.children)}</Fragment>
             )}
-          </>
+          </Fragment>
         ))}
       </ul>
     );

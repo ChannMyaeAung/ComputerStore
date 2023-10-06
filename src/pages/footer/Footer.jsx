@@ -5,7 +5,7 @@ const FooterBottom = lazy(() => import("./FooterBottom"));
 
 const Footer = () => {
   return (
-    <footer id="footer" className="relative bottom-0 w-full">
+    <footer id="footer" className="relative bottom-0 left-0 w-full">
       <Suspense fallback={<h1>Loading...</h1>}>
         <FooterTop />
         <FooterBottom />

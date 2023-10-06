@@ -1,8 +1,9 @@
 import React, { Suspense, lazy, useState } from "react";
-import { FaSearch, FaShoppingBag, FaUserAlt } from "react-icons/fa";
+import { LiaSearchSolid, LiaShoppingBagSolid, LiaUser } from "react-icons/lia";
 import logo from "../../assets/logo.webp";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
+import { styles } from "../../styles";
 
 const Sidebar = lazy(() => import("./Sidebar"));
 const Searchbar = lazy(() => import("./Searchbar"));
@@ -17,7 +18,9 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="flex h-[100px] border items-center justify-between gap-6 overflow-hidden">
+      <nav
+        className={`${styles.paddingX} flex h-[100px] items-center justify-between gap-6 overflow-hidden`}
+      >
         {/* Sidebar Toggle */}
         <div id="sidebar__container" className="flex gap-6 item-center">
           <div
@@ -25,8 +28,8 @@ const Navbar = () => {
             className={`hamburger ${isNavOpen ? "open" : ""}`}
             onClick={toggleMenu}
           >
-            <div className="w-[20px] hamburger__topBar bg-black h-[2px] absolute duration-1000 z-[20] ease-linear"></div>
-            <div className="w-[30px] hamburger__bottomBar bottom-0 bg-black h-[2px] absolute duration-1000 z-[20] ease-linear"></div>
+            <div className=" hamburger__topBar"></div>
+            <div className=" hamburger__bottomBar"></div>
           </div>
 
           {/* Search Bar Toggle */}
@@ -35,7 +38,7 @@ const Navbar = () => {
             className="p-0 m-0 duration-200 hover:scale-110"
             onClick={() => setSearchBarOpen(!searchBarOpen)}
           >
-            <FaSearch size={20} />
+            <LiaSearchSolid size={20} />
           </button>
         </div>
 
@@ -61,21 +64,24 @@ const Navbar = () => {
           <NavLink id="login" className="cursor-pointer">
             <IconContext.Provider
               value={{
-                className: "hover:text-red-600 duration-200",
+                className: "hover:text-red-600 text-[30px] duration-200",
               }}
             >
-              <FaUserAlt />
+              <LiaUser />
             </IconContext.Provider>
           </NavLink>
 
-          <button id="shopping__cart" className="pr-1">
+          <button id="shopping__cart" className="relative pr-1">
             <IconContext.Provider
               value={{
-                className: "hover:text-red-600 duration-200",
+                className: "hover:text-red-600 text-[30px] duration-200",
               }}
             >
-              <FaShoppingBag />
+              <LiaShoppingBagSolid />
             </IconContext.Provider>
+            <span className="absolute w-[20px] h-[20px] text-[12px] text-white top-[-3px] right-0 rounded-full bg-red-500">
+              0
+            </span>
           </button>
         </div>
       </nav>

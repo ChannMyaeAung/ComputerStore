@@ -9,7 +9,7 @@ import {
   LiaCoinsSolid,
 } from "react-icons/lia";
 import { IconContext } from "react-icons/lib";
-import { FAQLinks } from "../../data";
+import { FAQLinks } from "../../data/data";
 const FooterTop = () => {
   return (
     <section

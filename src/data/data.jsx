@@ -8,12 +8,11 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
-  FaHandPointRight, // sidebar
 } from "react-icons/fa";
 /* Payment Icons */
-import VisaIcon from "./assets/footerImgs/visa.svg";
-import MasterCardIcon from "./assets/footerImgs/master-card.svg";
-import PaypalIcon from "./assets/footerImgs/paypal.svg";
+import VisaIcon from "../assets/footerImgs/visa.svg";
+import MasterCardIcon from "../assets/footerImgs/master-card.svg";
+import PaypalIcon from "../assets/footerImgs/paypal.svg";
 
 /* Sidebar */
 export const sideBarEls = [
@@ -60,8 +59,8 @@ export const sideBarEls = [
       },
       {
         id: 36,
-        title: "Cables & Accessories - PC",
-        path: "/accessories-PC",
+        title: "Laptop RAM",
+        path: "/laptop-ram",
       },
     ],
   },
@@ -71,71 +70,82 @@ export const sideBarEls = [
     children: [
       {
         id: 41,
-        title: "Desktop Components",
-        children: [
-          {
-            id: 411,
-            title: "Intel CPU Sockets",
-            path: "/intel-cpu",
-          },
-          {
-            id: 412,
-            title: "AMD CPU Sockets",
-            path: "/amd-cpu",
-          },
-          {
-            id: 413,
-            title: "Motherboards",
-            path: "/motherboards",
-          },
-          {
-            id: 414,
-            title: "Desktop Memory",
-            path: "/desktop-ram",
-          },
-          {
-            id: 415,
-            title: "Laptop Memory",
-            path: "/laptop-ram",
-          },
-          {
-            id: 416,
-            title: "Graphic Cards",
-            path: "/gpus",
-          },
-          {
-            id: 417,
-            title: "Power Supplies",
-            path: "/power-supplies",
-          },
-        ],
+        title: "Intel CPU Sockets",
+        path: "/intel-cpu",
+      },
+      {
+        id: 42,
+        title: "AMD CPU Sockets",
+        path: "/amd-cpu",
+      },
+      {
+        id: 43,
+        title: "Motherboards",
+        path: "/motherboards",
+      },
+      {
+        id: 44,
+        title: "Desktop RAM",
+        path: "/desktop-ram",
+      },
+
+      {
+        id: 45,
+        title: "Graphic Cards",
+        path: "/gpus",
+      },
+      {
+        id: 46,
+        title: "Power Supplies",
+        path: "/power-supplies",
+      },
+      {
+        id: 47,
+        title: "Pre-built Desktops",
+        path: "/pre-built-desktops",
       },
     ],
   },
   {
     id: 5,
-    title: "TV, Video & Audio",
+    title: "Monitors",
+    children: [
+      {
+        id: 51,
+        title: "AOC",
+        path: "/aoc",
+      },
+    ],
   },
   {
     id: 6,
-    title: "Networking",
-  },
-];
-
-/* Home Page */
-/* Trending Now */
-export const trendingItems = [
-  {
-    id: 1,
-    title: "AOC",
-    path: "/aoc",
-    img: "./assets/homeImgs/trending_aoc_monitor.avif",
+    title: "Peripherals",
   },
   {
-    id: 2,
-    title: "AOC",
-    path: "/keyboards-mice",
-    img: "./assets/homeImgs/trending_keyboards&mice.avif",
+    id: 7,
+    title: "Chairs/Tables",
+    children: [
+      {
+        id: 71,
+        title: "Office Chairs",
+        path: "/office-chairs",
+      },
+      {
+        id: 72,
+        title: "Gaming Chairs",
+        path: "/gaming-chairs",
+      },
+      {
+        id: 73,
+        title: "Office Tables",
+        path: "/office-tables",
+      },
+      {
+        id: 74,
+        title: "Gaming Tables",
+        path: "/gaming-tables",
+      },
+    ],
   },
 ];
 
