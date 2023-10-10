@@ -124,3 +124,16 @@ body {
   transform: translate(-50%, -50%) rotate(135deg);
   opacity: 0;
 }
+
+.lastSlide {
+  transform: translateX(-100%);
+}
+
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nextSlide {
+  transform: translateX(100%);
+}

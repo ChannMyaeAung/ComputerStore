@@ -11,7 +11,10 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
           const percentOffValue =
             ((originalPrice - dealPrice) / originalPrice) * 100;
           return (
-            <NavLink key={id} className={`bg-white relative p-3 `}>
+            <NavLink
+              key={id}
+              className={`bg-white relative p-3 shadow-md border`}
+            >
               <figure className="aspect-[7/6] mb-6 duration-200 hover:bg-gray-300 focus-visible:bg-gray-300">
                 <img src={img} alt={title} className="w-full h-full " />
               </figure>
@@ -24,7 +27,7 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
                   ${dealPrice.toLocaleString()}
                 </span>
               </p>
-              <p className="w-[50px] h-[35px] top-0 p-1 text-white text-center absolute bg-red-500 md:text-[16px] text-[14px]">
+              <p className="w-[50px] h-[35px] left-1 top-1 p-1 text-white text-center absolute bg-red-500 md:text-[16px] text-[14px]">
                 {" "}
                 -{Math.floor(percentOffValue.toFixed(2))}%{" "}
               </p>
@@ -37,7 +40,7 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
 
   return (
     <>
-      {/* Trending Items Heading */}
+      {/* Deals Heading */}
       <div id="trending__now_heading" className="flex justify-between">
         <h1 className={`${homeStyles.heading}`}>
           <NavLink>Today's Best Deals</NavLink>
@@ -55,7 +58,7 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
       {/* Best Deals Items */}
       <div
         id="trending__now_items"
-        className="grid justify-between grid-cols-2 gap-10 overflow-hidden md:grid-cols-4"
+        className="grid justify-between grid-cols-2 overflow-hidden md:grid-cols-4"
       >
         {renderBestDeals()}
       </div>

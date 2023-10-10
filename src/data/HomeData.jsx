@@ -8,6 +8,31 @@ import msiraiderge78 from "../assets/homeImgs/best_deals/msi_raider_ge78.png";
 import msicreator from "../assets/homeImgs/best_deals/msicreator.png";
 import razorblade17 from "../assets/homeImgs/best_deals/razor_blade17.png";
 /* Home Page */
+
+import heroImg1 from "../assets/homeImgs/hero_img1.jpg";
+import heroImg2 from "../assets/homeImgs/hero_img2.jpg";
+import heroImg3 from "../assets/homeImgs/hero_img3.jpg";
+/* Hero Imgs */
+export const homeHeroImgs = [
+  {
+    id: 1,
+    img: heroImg1,
+    alt: "Corsair Dominator Titanium RAM",
+    path: "/",
+  },
+  {
+    id: 2,
+    img: heroImg2,
+    alt: "CPU and Motherboard Bundle",
+    path: "/",
+  },
+  {
+    id: 3,
+    img: heroImg3,
+    alt: "CPU and AIO Cooler Bundle",
+    path: "/",
+  },
+];
 /* Trending Now */
 export const trendingItems = [
   {
@@ -185,6 +210,91 @@ export const bestDeals = [
         battery: " 4 cell, 90Whr",
         carryBag: "MSI Topload Bag_Grey",
         warranty: "2 Years Parts & 3 years Service",
+      },
+    ],
+  },
+  {
+    id: 7,
+    img: razorblade17,
+    title: "Razor Blade 17 (RTX 3070Ti, GDDR6 8GB) Laptop (I9-12th Gen)",
+    freeGift: "MSI Original Mouse",
+    originalPrice: 3399,
+    dealPrice: 2299.99,
+    Specs: [
+      {
+        id: 11,
+        model: "Razor Blade 17",
+        display: `17.3" 240 Hz QHD`,
+        cpu: "Intel Core i9-12900H",
+        memory: "16 GB 4800 MHz",
+        storage: "1TB NVMe PCIe Gen4x4 SSD",
+        gpu: " GeForce RTX 3070 Ti GDDR6 8GB",
+        OS: "Windows 11 Home",
+        WLAN: "Intel® Killer™ Wi-Fi 6E AX1675(i)",
+        keyboard: "Per key RGB Keyboard",
+        battery: " 4 cell, 90Whr",
+        carryBag: "MSI Topload Bag_Grey",
+        warranty: "2 Years Parts & 3 years Service",
+      },
+    ],
+  },
+  {
+    id: 8,
+    img: razorblade17,
+    title: "Razor Blade 17 (RTX 3070Ti, GDDR6 8GB) Laptop (I9-12th Gen)",
+    freeGift: "MSI Original Mouse",
+    originalPrice: 3399,
+    dealPrice: 2299.99,
+    Specs: [
+      {
+        id: 11,
+        model: "Razor Blade 17",
+        display: `17.3" 240 Hz QHD`,
+        cpu: "Intel Core i9-12900H",
+        memory: "16 GB 4800 MHz",
+        storage: "1TB NVMe PCIe Gen4x4 SSD",
+        gpu: " GeForce RTX 3070 Ti GDDR6 8GB",
+        OS: "Windows 11 Home",
+        WLAN: "Intel® Killer™ Wi-Fi 6E AX1675(i)",
+        keyboard: "Per key RGB Keyboard",
+        battery: " 4 cell, 90Whr",
+        carryBag: "MSI Topload Bag_Grey",
+        warranty: "2 Years Parts & 3 years Service",
+      },
+    ],
+  },
+];
+
+import rtx4060ti from "../assets/homeImgs/newProducts/msi_4060ti.png";
+
+export const newProducts = [
+  {
+    id: 1,
+    title: "Geforce RTX 4060ti Gaming X Slim 16GB",
+    img: rtx4060ti,
+    specs: [
+      {
+        vram: "16GB GDDR6",
+        baseClock: "2310 MHZ",
+        boostClock: "2535 MHZ",
+        memoryClock: "2250 Mhz / 18Gbps",
+        recommendedPSU: "500W",
+        outputs: "1x HDMI 2.1, 3x DisplayPort 1.4a",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Geforce RTX 4070ti Gaming X Trio White 12GB",
+    img: rtx4060ti,
+    specs: [
+      {
+        vram: "12GB GDDR6X",
+        baseClock: "2310 MHZ",
+        boostClock: "2610 MHZ",
+        memoryClock: "1313 Mhz / 21Gbps",
+        recommendedPSU: "750W",
+        outputs: "1x HDMI 2.1, 3x DisplayPort 1.4a",
       },
     ],
   },
