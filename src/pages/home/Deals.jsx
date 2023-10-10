@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { homeStyles } from "../../styles";
+import { homeStyles, styles } from "../../styles";
 
 const Deals = ({ bestDeals, windowWidth, viewAll }) => {
   function renderBestDeals() {
@@ -8,15 +8,22 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
       <>
         {bestDeals.map((item, index) => {
           const { id, img, title, originalPrice, dealPrice } = item;
+
+          /* Calculating the percentage value of discount price (e.g. -10% off) */
           const percentOffValue =
             ((originalPrice - dealPrice) / originalPrice) * 100;
-          return (
+
+          /* Display only 4 items on small screens below 768px,
+            Display all items on large screens >= 768px
+            */
+          return windowWidth >= 768 || index < 4 ? (
             <NavLink
               key={id}
               className={`bg-white relative p-3 shadow-md border`}
             >
-              <figure className="aspect-[7/6] mb-6 duration-200 hover:bg-gray-300 focus-visible:bg-gray-300">
+              <figure className={`${styles.figure} relative`}>
                 <img src={img} alt={title} className="w-full h-full " />
+                <div className="overlay" />
               </figure>
               <h3 className="mb-3 font-semibold">{title}</h3>
               <p className="flex gap-3 font-medium">
@@ -27,12 +34,12 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
                   ${dealPrice.toLocaleString()}
                 </span>
               </p>
-              <p className="w-[50px] h-[35px] left-1 top-1 p-1 text-white text-center absolute bg-red-500 md:text-[16px] text-[14px]">
+              <p className="w-[50px] h-[35px] left-1 top-1 p-1 text-white text-center absolute bg-red-500 md:text-[14px] lg:text-[16px] text-[13px]">
                 {" "}
                 -{Math.floor(percentOffValue.toFixed(2))}%{" "}
               </p>
             </NavLink>
-          );
+          ) : null;
         })}
       </>
     );
@@ -58,7 +65,7 @@ const Deals = ({ bestDeals, windowWidth, viewAll }) => {
       {/* Best Deals Items */}
       <div
         id="trending__now_items"
-        className="grid justify-between grid-cols-2 overflow-hidden md:grid-cols-4"
+        className="grid justify-between grid-cols-2 overflow-hidden md:grid-cols-3 place-items-center lg:grid-cols-4"
       >
         {renderBestDeals()}
       </div>

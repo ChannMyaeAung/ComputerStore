@@ -266,12 +266,15 @@ export const bestDeals = [
 ];
 
 import rtx4060ti from "../assets/homeImgs/newProducts/msi_4060ti.png";
-
+import rtx4070ti from "../assets/homeImgs/newProducts/msi_4070Ti.png";
+import iphone14 from "../assets/homeImgs/newProducts/AppleiPhone14Plus128GB_Starlight.png";
+import macbookM2Pro from "../assets/homeImgs/newProducts/macbookPro.png";
 export const newProducts = [
   {
     id: 1,
     title: "Geforce RTX 4060ti Gaming X Slim 16GB",
     img: rtx4060ti,
+    price: 600,
     specs: [
       {
         vram: "16GB GDDR6",
@@ -286,7 +289,8 @@ export const newProducts = [
   {
     id: 2,
     title: "Geforce RTX 4070ti Gaming X Trio White 12GB",
-    img: rtx4060ti,
+    img: rtx4070ti,
+    price: 800,
     specs: [
       {
         vram: "12GB GDDR6X",
@@ -295,6 +299,46 @@ export const newProducts = [
         memoryClock: "1313 Mhz / 21Gbps",
         recommendedPSU: "750W",
         outputs: "1x HDMI 2.1, 3x DisplayPort 1.4a",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Apple iPhone 14 ESim 128GB (Starlight) ZP/A",
+    img: iphone14,
+    price: 699,
+    specs: [
+      {
+        display: "Super Retina XDR display",
+        capacity: "128GB",
+        operatingSystem: "IOS 16",
+        sensors:
+          " Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+        chip: "A15 Bionic chip, 6‑core CPU with 2 performance and 4 efficiency cores, 5‑core GPU, 16‑core Neural Engine",
+        weight: "7.16 ounces (203 grams)",
+        SIM: "nano-SIM and eSIM",
+        warranty: "Apple Offical Warranty 1 Year",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Apple MacBook Pro 2023 14-Inch M2 Pro Chip 512GB SSD (Silver)",
+    img: macbookM2Pro,
+    price: 1499,
+    specs: [
+      {
+        display:
+          "14.2-inch (diagonal) Liquid Retina XDR display; 3024-by-1964 native resolution at 254 pixels per inch, Liquid Retina XDR display",
+        memory: "16GB unified memory",
+        capacity: "512 GB SSD, Configurable to: 1TB, 2TB, 4TB, or 8TB",
+        operatingSystem: "macOS",
+        camera:
+          "720p FaceTime HD camera, Advanced image signal processor with computational video",
+        chip: "Apple M2 Pro chip, 10-core CPU with 6 performance cores and 4 efficiency cores, 16-core GPU, 16-core Neural Engine, 200GB/s memory bandwidth",
+        weight: "4.7 pounds (2.15 kg)",
+        SIM: "nano-SIM and eSIM",
+        warranty: "Apple Offical Warranty 1 Year",
       },
     ],
   },

@@ -137,3 +137,19 @@ body {
 .nextSlide {
   transform: translateX(100%);
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.1;
+  display: none; /* Initially hide the overlay */
+  transition: all 300ms ease-in-out;
+}
+
+figure:hover .overlay {
+  display: block; /* Show the overlay when hovering over the figure */
+}

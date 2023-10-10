@@ -142,7 +142,7 @@ const Home = () => {
       <Suspense fallback={<h1>Loading...</h1>}>
         <div
           id="today__deals"
-          className={`flex flex-col gap-3 ${styles.marginY} py-3 ${styles.paddingX}`}
+          className={`flex flex-col gap-3  py-3 ${styles.paddingX}`}
         >
           <NewProducts
             newProducts={newProducts}
